@@ -1,1 +1,50 @@
+.header {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+  .logo {
+   margin: 0%;
+  }
+
+  .container-comparador {
+    background-color: #ff6315;
+    height: 60px;
+    width: 15%;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+  .link-texto {
+    margin: 0 50px;
+    color: #FFFFFF;
+    text-decoration: none;   
+    font-size: 1em;
+
+  }
+
+  .link-header{
+    display: inline-block;
+    list-style: none;
+    list-style-type: none;
+  }
+  
+  .link-nav{
+    text-decoration:none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.3em;
+    }
+
+    .button-header {
+        cursor: pointer;
+        background-color: #FFFFFF;
+        border-style: none;
+    }
+
+   
+
 
