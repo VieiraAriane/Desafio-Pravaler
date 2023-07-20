@@ -8,6 +8,7 @@ const Instituicao = () => {
   return (
     <div>
       <h1> FACULDADE </h1>
+      <input></input>
     </div>
   );
 }
