@@ -21,8 +21,9 @@
 // }
 
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ListarDados from '../../Api/useDados'
+import { Link } from 'react-router-dom';
 
 const Comparador = () => {
     const { instituicao, campus, curso, estado } = ListarDados();
@@ -84,6 +85,7 @@ const Comparador = () => {
                     </option>
                 ))}
             </select>
+            <Link to="/cadastro"> Quero esse!</Link>
 
         </div>
     );
