@@ -4,6 +4,7 @@ import InstituicaoEscolhida from "../../Componentes/InstituicaoEscolhida";
 import CampusEscolhido from "../../Componentes/CampusEscolhido";
 import CursoEscolhido from "../../Componentes/CursoEscolhido";
 import EstadoEscolhido from "../../Componentes/EstadoEscolhido";
+import { Link } from "react-router-dom";
 
 const Comparador = () => {
   const { instituicao, campus, curso, estado } = ListarDados();
@@ -51,6 +52,7 @@ const Comparador = () => {
         estadoSelecionado={estadoSelecionado}
         onChange={handleEstadoChange}
       />
+      <Link to="/cadastro"> Quero esse!</Link>
     </div>
   );
 };
