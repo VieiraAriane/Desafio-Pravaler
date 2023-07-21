@@ -82,7 +82,7 @@ const Comparador = () => {
         return <>
         <ul>
         <li>Curso: {curso.name}</li>
-        <li>Mensalidade: {curso.monthly_payment}</li>
+        <li>Mensalidade: R${curso.monthly_payment}</li>
         <li>Avaliação do MEC: {curso.mec_avaliation}</li>
         </ul>
         </>        
