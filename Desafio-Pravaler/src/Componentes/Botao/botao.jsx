@@ -1,3 +1,13 @@
+import './botao.css'
+
+export const Botao = (props) => {
+    return(
+        <button className='botao'>
+            {props.children}
+        </button>
+    )
+}
+
 import "./botao.css";
 
 
@@ -16,6 +26,3 @@ export const Botao = ({
     </div>
   );
 };
-
-
-
