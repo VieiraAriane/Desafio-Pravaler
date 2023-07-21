@@ -7,14 +7,11 @@ import "./pagina-inicial.css";
 // import { Botao } from "../../Componentes/Botao/botao";
 // import { useNavigate } from "react-router-dom";
 
-
 const PaginaInicial = ()=>{
 
     // const navigate = useNavigate();
-
     // const handleQueroComparar = () => navigate("/comparador");
-         
-      
+               
     return (
         <>
         

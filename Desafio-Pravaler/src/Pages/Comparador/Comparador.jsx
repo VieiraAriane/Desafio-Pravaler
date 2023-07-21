@@ -41,7 +41,6 @@ const Comparador = () => {
     setEstadoSelecionado(event.target.value);
   };
       
-
   const handleExibirSelecoes = () => {
     setExibirSelecoes(true);
   };
