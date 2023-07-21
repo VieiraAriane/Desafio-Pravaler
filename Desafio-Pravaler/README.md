@@ -106,3 +106,4 @@ visualmente a funcionalidade e reproduzimos fielmente o produto final em termos 
 ***
 
 #### 🧡 ESTE PROJETO FOI CRIADO E DESENVOLVIDO POR: [DANILA RAMOS](https://github.com/DanilaRamos) 💛 & [TARCILA](https://github.com/VanessaNMenezes) 💚
+& [TARCILA](https://github.com/VanessaNMenezes) 💚 & [TARCILA](https://github.com/VanessaNMenezes) 💚
