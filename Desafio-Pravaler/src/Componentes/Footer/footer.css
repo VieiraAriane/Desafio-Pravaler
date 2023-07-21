@@ -1,0 +1,14 @@
+.container-footer {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black
+  }
+  
+.copyright {
+    color: #FFFFFF;
+    font-size: 30px;
+}
+  
+ 

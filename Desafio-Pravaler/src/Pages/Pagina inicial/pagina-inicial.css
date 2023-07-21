@@ -106,11 +106,11 @@
 .pergunta-duvidas {
     margin: 50px;
     font-size: 1em;
+    font-weight: bold;
     color: #ff6315;
 }
 
 .resposta-duvidas {
     margin: 50px;
     font-size: 1em;
-    
 }
