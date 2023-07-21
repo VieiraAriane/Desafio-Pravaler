@@ -7,41 +7,52 @@
      }
 
 .comparador-estilo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     margin: 0 auto;
-  }
-
-  select {
-    margin: 10px 0;
-    padding: 8px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
     font-size: 16px;
-  }
-
-  .selecoes-usuario {
-    margin-top: 20px;
-    text-align: left;
+    display: grid;
   }
   
-  .selecoes-usuario h2 {
-    font-size: 20px;
+  .InstituicaoEscolhida select,
+  .CampusEscolhido select,
+  .CursoEscolhido select,
+  .EstadoEscolhido select,
+  .Curso-Escolhido {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
     margin-bottom: 10px;
   }
   
-  .selecoes-usuario p {
-    margin: 5px 0;
+  .Curso-Escolhido {
+    display: grid;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
   }
-
-  .Curso-Escolhido{
-
-    margin: 10px 0;
-    padding: 8px;
+  
+  .Curso-Escolhido li {
+    margin-bottom: 10px;
+    display: grid;
+    text-decoration: none;
+  }
+  
+  button {
+    padding: 10px 20px;
     font-size: 16px;
+    background-color: #ff6315;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #a661f6;
   }
 
