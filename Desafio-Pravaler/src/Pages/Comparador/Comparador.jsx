@@ -80,9 +80,11 @@ const Comparador = () => {
       {todosCursos.map(curso => {
         
         return <>
-        <p>{curso.name}</p>
-        <p>{curso.monthly_payment}</p>
-        <p>{curso.mec_avaliation}</p>
+        <ul>
+        <li>Curso: {curso.name}</li>
+        <li>Mensalidade: {curso.monthly_payment}</li>
+        <li>Avaliação do MEC: {curso.mec_avaliation}</li>
+        </ul>
         </>        
       })}
       </div>
