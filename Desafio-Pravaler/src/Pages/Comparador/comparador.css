@@ -1,0 +1,47 @@
+.container-quero {
+    background-color: #a661f6;
+    height: 60px;
+    width: 20%;
+    border-radius: 50px;
+    cursor: pointer;
+     }
+
+.comparador-estilo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  select {
+    margin: 10px 0;
+    padding: 8px;
+    font-size: 16px;
+  }
+
+  .selecoes-usuario {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .selecoes-usuario h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .selecoes-usuario p {
+    margin: 5px 0;
+  }
+
+  .Curso-Escolhido{
+
+    margin: 10px 0;
+    padding: 8px;
+    font-size: 16px;
+  }
+

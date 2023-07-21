@@ -1,0 +1,116 @@
+.container-inicial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    height: 30%;
+    width: 39%;
+    margin-top: 8%;
+    margin-left: 25px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.estudante {
+    margin-left: 42%;
+}
+
+.estudantePravalente {
+    margin-top: -704px ;
+    height: 800px;
+}
+
+.texto-convite {
+    color: #a661f6;
+    margin-left: 75px;
+    font-weight: bold;
+    font-size: 2.2em;
+}
+
+.texto-resposta {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.container-comparador {
+    background-color: #ff6315;
+    height: 60px;
+    width: 80%;
+    border-radius: 50px;
+    cursor: pointer;
+ }
+
+  .link-texto {
+    margin: 20%;
+    color: #FFFFFF;
+    text-decoration: none;   
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .container-pravaler {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    height: 900px;
+  }
+
+  .titulo-pravaler {
+    margin: 50px;
+    color:#ff6315;
+    font-size: 2em;
+ }
+
+ .container-texto {
+    background-color: #FFFFFF;
+    color: #474747;
+    font-size: 1.4em;
+    text-align: center;
+    margin-left: 48%;
+    margin-top: -650px;
+    padding: 15px;
+ }
+
+ .vantagensPravalente {
+    height: 600px;
+ }
+
+ .container-financiamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #a661f6;
+    height: 900px;
+ }
+
+ .titulo-financiamento {
+    color: #FFFFFF;
+    font-size: 2em;
+}
+
+.texto {
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.porquinhoPravalente {
+    height: 500px;
+}
+
+.titulo-duvidas {
+    margin: 50px;
+    color: #ff6315;
+    font-size: 2em;
+}
+
+.pergunta-duvidas {
+    margin: 50px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ff6315;
+}
+
+.resposta-duvidas {
+    margin: 50px;
+    font-size: 1em;
+}

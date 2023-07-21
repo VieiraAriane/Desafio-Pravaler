@@ -8,7 +8,7 @@ const EstadoEscolhido = ({ estado, estadoSelecionado, onChange }) => {
         <option value=""> Selecione o Estado</option>
         {estado.map((est) => {
           return (
-            <option key={est.id} value={est.name}>
+            <option key={est.uf} value={est.uf}>
               {est.name}
             </option>
           );
