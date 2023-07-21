@@ -4,6 +4,7 @@ function App() {
 
   return (
     <>
+    
      <Comparador />
       <p className="read-the-docs">
       </p>
