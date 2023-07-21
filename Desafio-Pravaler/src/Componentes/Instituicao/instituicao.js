@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
+import "./instituicao.css";
 
 const InstituicaoEscolhida = ({ instituicao, instituicaoSelecionada, onChange}) => {
     return (
         <div>
-            <h1>Instituição</h1>
+            <h1 className="titulo">Instituição</h1>
             <select value={instituicaoSelecionada} onChange={onChange}>
                 <option value=""> Selecione uma instituicao</option>
                 {instituicao.map((inst) => {

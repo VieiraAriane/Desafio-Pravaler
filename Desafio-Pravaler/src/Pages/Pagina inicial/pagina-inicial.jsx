@@ -5,9 +5,17 @@ import estudante from "../../Imagens/estudante.png";
 import vantagens from "../../Imagens/vantagens.png";
 import porquinho from "../../Imagens/porquinho.png";
 import "./pagina-inicial.css";
+// import { Botao } from "../../Componentes/Botao/botao";
+// import { useNavigate } from "react-router-dom";
 
 
 const PaginaInicial = ()=>{
+
+    // const navigate = useNavigate();
+
+    // const handleQueroComparar = () => navigate("/comparador");
+         
+      
     return (
         <>
         
@@ -23,6 +31,7 @@ const PaginaInicial = ()=>{
             </p>
             <div className="container-comparador">
         <Link className="link-texto" to="/comparador">Quero comparar</Link>
+        {/* <Botao onClick={handleQueroComparar}>Quero comparar</Botao> */}
       </div>
         </div>
 

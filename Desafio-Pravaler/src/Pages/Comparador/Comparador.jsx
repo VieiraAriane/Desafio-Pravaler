@@ -6,6 +6,8 @@ import CursoEscolhido from "../../Componentes/CursoEscolhido";
 import EstadoEscolhido from "../../Componentes/EstadoEscolhido";
 import { Link } from "react-router-dom";
 import { Header } from "../../Componentes/Header/header";
+import { Botao } from "../../Componentes/Botao/botao";
+import "./comparador.css";
 
 
 const Comparador = () => {
@@ -64,7 +66,7 @@ const Comparador = () => {
         estadoSelecionado={estadoSelecionado}
         onChange={handleEstadoChange}
       />
-      <button onClick={handleExibirSelecoes}>Mostrar Seleções</button> {/* Botão para mostrar as seleções */}
+      <Botao onClick={handleExibirSelecoes}>Mostrar Seleções</Botao> {/* Botão para mostrar as seleções */}
       {exibirSelecoes && ( // Renderizar as seleções somente quando o botão for clicado
         <div>
           <h2>Seleções do Usuário:</h2>
@@ -74,7 +76,10 @@ const Comparador = () => {
           <p>Estado: {estadoSelecionado}</p>
         </div>
       )}
-      <Link to="/cadastro"> Quero esse!</Link>
+      <div className="container-quero">
+        
+        <Link className="link-texto" to="/cadastro">Quero este</Link>
+       </div>
     </div>
     </>
   );
