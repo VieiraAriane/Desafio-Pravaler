@@ -1,13 +1,12 @@
-// import { useState } from 'react'
-import Instituicao from "./Filtros-Json/instituicao"
+import Comparador from "./Pages/Comparador/Comparador"
 
 function App() {
 
   return (
     <>
-     <Instituicao />
+    
+     <Comparador />
       <p className="read-the-docs">
-        Página inicial
       </p>
     </>
   )

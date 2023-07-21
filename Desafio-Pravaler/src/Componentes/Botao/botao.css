@@ -1,0 +1,19 @@
+.button-container {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;  
+  }  
+  
+  .button {
+    margin: 5px;
+    width: 50%;
+    height: 70px;
+    margin-left: 25%;
+    border-radius: 50px; 
+    border: white solid;
+    background-color: #ff6315;
+    cursor: pointer;
+    color: white;
+    font-size: 1em;
+    font-weight:bolder;
+}
