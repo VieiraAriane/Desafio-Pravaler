@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ListarDados from "../../Componentes/ListarDados";
 import InstituicaoEscolhida from "../../Componentes/InstituicaoEscolhida";
 import CampusEscolhido from "../../Componentes/CampusEscolhido";
@@ -20,7 +20,8 @@ const Comparador = () => {
 import { Header } from "../../Componentes/Header/header";
 import { Botao } from "../../Componentes/Botao/botao";
 import "./comparador.css";
-
+import { getCursos } from "../../Api/fetchData";
+import "./comparador.css"
 
 const Comparador = () => {
   const { instituicao, campus, curso, estado } = ListarDados();
@@ -29,13 +30,17 @@ const Comparador = () => {
   const [cursoSelecionado, setCursoSelecionado] = useState("");
   const [estadoSelecionado, setEstadoSelecionado] = useState("");
   const [exibirSelecoes, setExibirSelecoes] = useState(false);
+  const [todosCursos, setTodosCursos] = useState([]);
 
+  useEffect(() => {
+    getCursos().then((data) => {
+      setTodosCursos(data.courses.filter(dat => dat.name.includes(cursoSelecionado)))
+    });
+  }, [cursoSelecionado])
 
   const handleInstituicaoChange = (event) => {
     setInstituicaoSelecionada(event.target.value);
   };
-
-
 
   const handleCampusChange = (event) => {
     setCampusSelecionado(event.target.value);
@@ -48,8 +53,7 @@ const Comparador = () => {
   const handleEstadoChange = (event) => {
     setEstadoSelecionado(event.target.value);
   };
-    
-  
+      
   return (
 
   const handleEstadoChange = (event) => {
@@ -58,12 +62,11 @@ const Comparador = () => {
   const handleExibirSelecoes = () => {
     setExibirSelecoes(true);
   };
-   
- 
+
   return (
     <>
     <Header />
-    <div>
+    <div className="comparador-estilo" >
       <InstituicaoEscolhida
         instituicao={instituicao}
         instituicaoSelecionada={instituicaoSelecionada}
@@ -73,38 +76,39 @@ const Comparador = () => {
         campus={campus}
         campusSelecionado={campusSelecionado}
         onChange={handleCampusChange}
-      />
+       />
       <CursoEscolhido
         curso={curso}
         cursoSeleciona={cursoSelecionado}
         onChange={handleCursoChange}
-      />
+     />
+
       <EstadoEscolhido
         estado={estado}
         estadoSelecionado={estadoSelecionado}
         onChange={handleEstadoChange}
       />
 
-      <Botao onClick={handleExibirSelecoes}>Mostrar Seleções</Botao> {/* Botão para mostrar as seleções */}
+      <Botao onClick={handleExibirSelecoes}>Mostrar Seleções</Botao> 
+      {exibirSelecoes && ( 
+      
+       <div className="Curso-Escolhido">
+      {todosCursos.map(curso => {
+        
+        return <>
+        <ul>
+        <li>Curso: {curso.name}</li>
+        <li>Mensalidade: R${curso.monthly_payment}</li>
+        <li>Avaliação do MEC: {curso.mec_avaliation}</li>
+        </ul>
+        </>        
+      })}
+      </div>
 
-      <Link to="/cadastro"> Quero esse!</Link>
-    </div>
-  );
-};
-
-
-      {exibirSelecoes && ( // Renderizar as seleções somente quando o botão for clicado
-        <div>
-          <h2>Seleções do Usuário:</h2>
-          <p>Instituição: {instituicaoSelecionada}</p>
-          <p>Campus: {campusSelecionado}</p>
-          <p>Curso: {cursoSelecionado}</p>
-          <p>Estado: {estadoSelecionado}</p>
-        </div>
       )}
       <div className="container-quero">
         
-        <Link className="link-texto" to="/cadastro">Quero este</Link>
+         <Link to="/cadastro"> Quero esse!</Link>
        </div>
     </div>
     </>

@@ -8,7 +8,7 @@ const CursoEscolhido = ({ curso, cursoSelecionado, onChange}) => {
                 <option value=""> Selecione o Curso</option>
                 {curso.map((cur) => {
                     return(
-                    <option key={cur.id} value={cur.name}>
+                    <option key={cur.instituionId} value={cur.name}>
                         {cur.name}
                     </option>
                     )
