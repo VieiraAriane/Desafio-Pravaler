@@ -42,10 +42,7 @@ const PaginaInicial = ()=>{
           <picture className="vantagens">
             <img className="vantagensPravalente" src={vantagens} alt="Quadro de aviso com vantagens Pravaler" />
           </picture>
-          <div className="container-texto">
-          <p>Mais que atender um mercado, no Pravaler a gente persegue um ideal: “Tornar a educação acessível para quem quer transformar a própria história, transformar sua comunidade, o seu país e o mundo”. Aqui, nosso sonho é tão grande quanto o seu, seja você aluno ou Instituição de Ensino.
-           Nos esforçamos para entender os desafios de quem tem a educação como valor e sabe como ela pode transformar vidas. É pra essas pessoas que trabalhamos e ajudamos a construir caminhos para quem quer vencer. A gente acredita que a educação tem que ser pra todo mundo e não medimos esforços para que isso seja uma realidade!</p>
-        </div>
+        
         </div>
         </section> 
 
