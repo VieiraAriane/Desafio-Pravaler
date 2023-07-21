@@ -14,24 +14,32 @@ const Comparador = () => {
   const [campusSelecionado, setCampusSelecionado] = useState("");
   const [cursoSelecionado, setCursoSelecionado] = useState("");
   const [estadoSelecionado, setEstadoSelecionado] = useState("");
+  const [exibirSelecoes, setExibirSelecoes] = useState(false);
+
 
   const handleInstituicaoChange = (event) => {
     setInstituicaoSelecionada(event.target.value);
   };
 
+
   const handleCampusChange = (event) => {
     setCampusSelecionado(event.target.value);
   };
+
 
   const handleCursoChange = (event) => {
     setCursoSelecionado(event.target.value);
   };
 
+
   const handleEstadoChange = (event) => {
     setEstadoSelecionado(event.target.value);
   };
-    
-  
+  const handleExibirSelecoes = () => {
+    setExibirSelecoes(true);
+  };
+   
+ 
   return (
     <>
     <Header />
@@ -56,11 +64,21 @@ const Comparador = () => {
         estadoSelecionado={estadoSelecionado}
         onChange={handleEstadoChange}
       />
+      <button onClick={handleExibirSelecoes}>Mostrar Seleções</button> {/* Botão para mostrar as seleções */}
+      {exibirSelecoes && ( // Renderizar as seleções somente quando o botão for clicado
+        <div>
+          <h2>Seleções do Usuário:</h2>
+          <p>Instituição: {instituicaoSelecionada}</p>
+          <p>Campus: {campusSelecionado}</p>
+          <p>Curso: {cursoSelecionado}</p>
+          <p>Estado: {estadoSelecionado}</p>
+        </div>
+      )}
       <Link to="/cadastro"> Quero esse!</Link>
-     
     </div>
     </>
   );
 };
+
 
 export default Comparador;
