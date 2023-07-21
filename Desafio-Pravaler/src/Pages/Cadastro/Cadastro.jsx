@@ -1,11 +1,19 @@
+const Cadastro = ()=>{
+    return (
+        <div>
+            <h1>CADASTRAR USUARIO</h1>
+            
+        </div>
+    )
+}
+
+export default Cadastro
+
 import { Header } from "../../Componentes/Header/header"
 import InputForm from "../../Componentes/InputForms/inputForms";
 import { useState} from "react";
-// import { createUser } from "../../Api/createUser";
-
-import "./cadastro.css";
 import { Botao } from "../../Componentes/Botao/botao";
-
+import "./cadastro.css";
 
 const Cadastro = ()=>{
     const [name, setName] = useState('');

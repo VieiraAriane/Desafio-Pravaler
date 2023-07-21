@@ -5,10 +5,23 @@ import CampusEscolhido from "../../Componentes/CampusEscolhido";
 import CursoEscolhido from "../../Componentes/CursoEscolhido";
 import EstadoEscolhido from "../../Componentes/EstadoEscolhido";
 import { Link } from "react-router-dom";
+
+const Comparador = () => {
+  const { instituicao, campus, curso, estado } = ListarDados();
+  const [instituicaoSelecionada, setInstituicaoSelecionada] = useState("");
+  const [campusSelecionado, setCampusSelecionado] = useState("");
+  const [cursoSelecionado, setCursoSelecionado] = useState("");
+  const [estadoSelecionado, setEstadoSelecionado] = useState("");
+
+  const handleInstituicaoChange = (event) => {
+    setInstituicaoSelecionada(event.target.value);
+  };
+
 import { Header } from "../../Componentes/Header/header";
+import { Botao } from "../../Componentes/Botao/botao";
+import "./comparador.css";
 import { getCursos } from "../../Api/fetchData";
 import "./comparador.css"
-
 
 const Comparador = () => {
   const { instituicao, campus, curso, estado } = ListarDados();
@@ -25,21 +38,23 @@ const Comparador = () => {
     });
   }, [cursoSelecionado])
 
-
   const handleInstituicaoChange = (event) => {
     setInstituicaoSelecionada(event.target.value);
   };
 
-
   const handleCampusChange = (event) => {
     setCampusSelecionado(event.target.value);
   };
-
-
+  
   const handleCursoChange = (event) => {
     setCursoSelecionado(event.target.value);
   };
 
+  const handleEstadoChange = (event) => {
+    setEstadoSelecionado(event.target.value);
+  };
+      
+  return (
 
   const handleEstadoChange = (event) => {
     setEstadoSelecionado(event.target.value);
@@ -73,25 +88,31 @@ const Comparador = () => {
         estadoSelecionado={estadoSelecionado}
         onChange={handleEstadoChange}
       />
-      <button onClick={handleExibirSelecoes}>Mostrar Seleções</button> 
+
+      <Botao onClick={handleExibirSelecoes}>Mostrar Seleções</Botao> 
       {exibirSelecoes && ( 
       
-      <div className="Curso-Escolhido">
+       <div className="Curso-Escolhido">
       {todosCursos.map(curso => {
         
         return <>
-        <p>{curso.name}</p>
-        <p>{curso.monthly_payment}</p>
-        <p>{curso.mec_avaliation}</p>
+        <ul>
+        <li>Curso: {curso.name}</li>
+        <li>Mensalidade: R${curso.monthly_payment}</li>
+        <li>Avaliação do MEC: {curso.mec_avaliation}</li>
+        </ul>
         </>        
       })}
       </div>
+
       )}
-      <Link to="/cadastro"> Quero esse!</Link>
+      <div className="container-quero">
+        
+         <Link to="/cadastro"> Quero esse!</Link>
+       </div>
     </div>
     </>
   );
 };
-
 
 export default Comparador;
