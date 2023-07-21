@@ -10,23 +10,7 @@
    margin: 0%;
   }
 
-  .container-comparador {
-    background-color: #ff6315;
-    height: 60px;
-    width: 15%;
-    border-radius: 50px;
-    cursor: pointer;
-}
-
-  .link-texto {
-    margin: 0 50px;
-    color: #FFFFFF;
-    text-decoration: none;   
-    font-size: 1em;
-
-  }
-
-  .link-header{
+ .link-header{
     display: inline-block;
     list-style: none;
     list-style-type: none;
