@@ -1,5 +1,4 @@
-import "./botao.css";
-
+import './botao.css'
 
 export const Botao = ({
   children,
@@ -16,6 +15,3 @@ export const Botao = ({
     </div>
   );
 };
-
-
-

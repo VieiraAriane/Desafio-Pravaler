@@ -6,9 +6,9 @@ import CursoEscolhido from "../../Componentes/CursoEscolhido";
 import EstadoEscolhido from "../../Componentes/EstadoEscolhido";
 import { Link } from "react-router-dom";
 import { Header } from "../../Componentes/Header/header";
+import { Botao } from "../../Componentes/Botao/botao";
+import "./comparador.css";
 import { getCursos } from "../../Api/fetchData";
-import "./comparador.css"
-
 
 const Comparador = () => {
   const { instituicao, campus, curso, estado } = ListarDados();
@@ -25,25 +25,23 @@ const Comparador = () => {
     });
   }, [cursoSelecionado])
 
-
   const handleInstituicaoChange = (event) => {
     setInstituicaoSelecionada(event.target.value);
   };
 
-
   const handleCampusChange = (event) => {
     setCampusSelecionado(event.target.value);
   };
-
-
+  
   const handleCursoChange = (event) => {
     setCursoSelecionado(event.target.value);
   };
 
-
   const handleEstadoChange = (event) => {
     setEstadoSelecionado(event.target.value);
   };
+      
+
   const handleExibirSelecoes = () => {
     setExibirSelecoes(true);
   };
@@ -73,10 +71,11 @@ const Comparador = () => {
         estadoSelecionado={estadoSelecionado}
         onChange={handleEstadoChange}
       />
-      <button onClick={handleExibirSelecoes}>Mostrar Seleções</button> 
+
+      <Botao onClick={handleExibirSelecoes}>Mostrar Seleções</Botao> 
       {exibirSelecoes && ( 
       
-      <div className="Curso-Escolhido">
+       <div className="Curso-Escolhido">
       {todosCursos.map(curso => {
         
         return <>
@@ -88,12 +87,15 @@ const Comparador = () => {
         </>        
       })}
       </div>
+
       )}
-      <Link to="/cadastro"> Quero esse!</Link>
+      <div className="container-quero">
+        
+         <Link to="/cadastro"> Quero esse!</Link>
+       </div>
     </div>
     </>
   );
 };
-
 
 export default Comparador;

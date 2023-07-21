@@ -1,17 +1,13 @@
 import { Header } from "../../Componentes/Header/header"
 import InputForm from "../../Componentes/InputForms/inputForms";
 import { useState} from "react";
-// import { createUser } from "../../Api/createUser";
-
-import "./cadastro.css";
 import { Botao } from "../../Componentes/Botao/botao";
-
+import "./cadastro.css";
 
 const Cadastro = ()=>{
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [telefone, setTelefone] = useState('');
-  
+    const [telefone, setTelefone] = useState('');  
     
     return (
         <>
