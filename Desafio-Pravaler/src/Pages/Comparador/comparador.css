@@ -1,0 +1,58 @@
+.container-quero {
+    background-color: #a661f6;
+    height: 60px;
+    width: 20%;
+    border-radius: 50px;
+    cursor: pointer;
+     }
+
+.comparador-estilo {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    display: grid;
+  }
+  
+  .InstituicaoEscolhida select,
+  .CampusEscolhido select,
+  .CursoEscolhido select,
+  .EstadoEscolhido select,
+  .Curso-Escolhido {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .Curso-Escolhido {
+    display: grid;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
+  
+  .Curso-Escolhido li {
+    margin-bottom: 10px;
+    display: grid;
+    text-decoration: none;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff6315;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #a661f6;
+  }
+
