@@ -18,8 +18,7 @@ import "./cadastro.css";
 const Cadastro = ()=>{
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [telefone, setTelefone] = useState('');
-  
+    const [telefone, setTelefone] = useState('');  
     
     return (
         <>

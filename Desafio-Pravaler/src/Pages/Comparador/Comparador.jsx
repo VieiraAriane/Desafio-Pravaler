@@ -5,23 +5,10 @@ import CampusEscolhido from "../../Componentes/CampusEscolhido";
 import CursoEscolhido from "../../Componentes/CursoEscolhido";
 import EstadoEscolhido from "../../Componentes/EstadoEscolhido";
 import { Link } from "react-router-dom";
-
-const Comparador = () => {
-  const { instituicao, campus, curso, estado } = ListarDados();
-  const [instituicaoSelecionada, setInstituicaoSelecionada] = useState("");
-  const [campusSelecionado, setCampusSelecionado] = useState("");
-  const [cursoSelecionado, setCursoSelecionado] = useState("");
-  const [estadoSelecionado, setEstadoSelecionado] = useState("");
-
-  const handleInstituicaoChange = (event) => {
-    setInstituicaoSelecionada(event.target.value);
-  };
-
 import { Header } from "../../Componentes/Header/header";
 import { Botao } from "../../Componentes/Botao/botao";
 import "./comparador.css";
 import { getCursos } from "../../Api/fetchData";
-import "./comparador.css"
 
 const Comparador = () => {
   const { instituicao, campus, curso, estado } = ListarDados();
@@ -54,11 +41,6 @@ const Comparador = () => {
     setEstadoSelecionado(event.target.value);
   };
       
-  return (
-
-  const handleEstadoChange = (event) => {
-    setEstadoSelecionado(event.target.value);
-  };
   const handleExibirSelecoes = () => {
     setExibirSelecoes(true);
   };
